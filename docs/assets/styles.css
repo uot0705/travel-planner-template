@@ -80,6 +80,8 @@ img {
   margin: 0;
   font-size: clamp(30px, 4vw, 52px);
   line-height: 1.05;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .hero p,
@@ -109,6 +111,19 @@ img {
 
 .summary-card {
   padding: 16px;
+}
+
+.summary-card-link {
+  display: block;
+  text-decoration: none;
+}
+
+.summary-link {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .summary-card .label,
@@ -504,6 +519,11 @@ img {
   .site-shell {
     width: min(calc(100% - 18px), var(--content-width));
     padding-bottom: 32px;
+  }
+
+  .place-hero h1 {
+    font-size: 24px;
+    line-height: 1.12;
   }
 
   .hero,
