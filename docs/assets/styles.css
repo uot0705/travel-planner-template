@@ -159,7 +159,7 @@ img {
   appearance: none;
   border: 0;
   border-radius: var(--radius-sm);
-  padding: 12px 16px;
+  padding: 14px 18px;
   background: rgba(255, 255, 255, 0.8);
   color: var(--muted);
   font: inherit;
@@ -204,12 +204,6 @@ img {
   font-size: 14px;
 }
 
-.day-stat-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
 .chip,
 .badge {
   display: inline-flex;
@@ -250,8 +244,8 @@ img {
 }
 
 .timeline-time {
-  padding-top: 4px;
-  font-size: 13px;
+  padding-top: 14px;
+  font-size: 14px;
   font-weight: 900;
   color: var(--muted);
   text-align: right;
@@ -277,14 +271,14 @@ img {
   background: var(--accent);
 }
 
-.timeline-card[data-kind="move"]::before,
-.timeline-card[data-kind="logistics"]::before {
-  background: #4a81b2;
-}
-
-.timeline-card[data-kind="free_time"]::before {
-  background: #8a6ccf;
-}
+.timeline-card[data-tone="food"]::before { background: #db5e30; }
+.timeline-card[data-tone="cafe"]::before { background: #c28b1f; }
+.timeline-card[data-tone="tour"]::before { background: #429167; }
+.timeline-card[data-tone="shopping"]::before { background: #4a81b2; }
+.timeline-card[data-tone="souvenir"]::before { background: #1f8f8f; }
+.timeline-card[data-tone="move"]::before { background: #5a6e91; }
+.timeline-card[data-tone="logistics"]::before { background: #9a5f7a; }
+.timeline-card[data-tone="free"]::before { background: #8a6ccf; }
 
 .card-topline {
   display: flex;
@@ -299,25 +293,43 @@ img {
 }
 
 .badge-cafe {
-  background: var(--amber-soft);
+  background: #f6e0b0;
 }
 
 .badge-tour {
   background: var(--green-soft);
 }
 
-.badge-shopping,
-.badge-souvenir {
+.badge-shopping {
   background: var(--blue-soft);
 }
 
-.badge-move,
+.badge-souvenir {
+  background: #d7f0ef;
+}
+
+.badge-move {
+  background: #dde4ef;
+}
+
 .badge-logistics {
-  background: rgba(74, 129, 178, 0.16);
+  background: #f1dde7;
 }
 
 .badge-free {
   background: rgba(138, 108, 207, 0.15);
+}
+
+.time-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  padding: 7px 12px;
+  background: rgba(24, 33, 38, 0.06);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.01em;
 }
 
 .timeline-card h3,
@@ -546,6 +558,7 @@ img {
   }
 
   .timeline-time {
+    padding-top: 12px;
     font-size: 12px;
   }
 
