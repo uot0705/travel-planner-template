@@ -55,8 +55,7 @@
     </article>
   </section>
 
-  <section class="budget-sections">
-    
+  
   <section class="budget-day-section">
     <div class="budget-day-header">
       <h2>宿泊</h2>
@@ -92,14 +91,22 @@
   </section>
 
 
-  <section class="budget-day-section">
+  <nav class="tab-strip budget-tab-strip" aria-label="予算の日別切り替え">
+    <button class="tab-button" data-budget-day-button="day1" role="tab" aria-selected="false">Day 1</button>
+<button class="tab-button" data-budget-day-button="day2" role="tab" aria-selected="false">Day 2</button>
+<button class="tab-button" data-budget-day-button="day3" role="tab" aria-selected="false">Day 3</button>
+  </nav>
+
+  <section class="budget-sections">
+    
+  <section class="budget-day-section" data-budget-day-panel="day1" hidden>
     <div class="budget-day-header">
       <h2>Day 1</h2>
       
     </div>
     <div class="budget-entry-list">
       
-<article class="budget-entry" id="budget-tosokchon" data-budget-row="tosokchon" data-estimate-yen="2500">
+<article class="budget-entry" id="budget-tosokchon" data-budget-row="tosokchon" data-estimate-yen="2500" data-budget-day="day1">
   <div class="budget-entry-top">
     <span class="badge badge-food">ごはん</span>
     <span class="time-pill">14:05-14:25</span>
@@ -124,7 +131,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-standard-bun" data-budget-row="standard-bun" data-estimate-yen="1200">
+<article class="budget-entry" id="budget-standard-bun" data-budget-row="standard-bun" data-estimate-yen="1200" data-budget-day="day1">
   <div class="budget-entry-top">
     <span class="badge badge-cafe">カフェ</span>
     <span class="time-pill">16:15-16:35</span>
@@ -149,7 +156,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-seoul-bam" data-budget-row="seoul-bam" data-estimate-yen="3000">
+<article class="budget-entry" id="budget-seoul-bam" data-budget-row="seoul-bam" data-estimate-yen="3000" data-budget-day="day1">
   <div class="budget-entry-top">
     <span class="badge badge-food">ごはん</span>
     <span class="time-pill">19:30-20:45</span>
@@ -177,14 +184,14 @@
   </section>
 
 
-  <section class="budget-day-section">
+  <section class="budget-day-section" data-budget-day-panel="day2" hidden>
     <div class="budget-day-header">
       <h2>Day 2</h2>
       
     </div>
     <div class="budget-entry-list">
       
-<article class="budget-entry" id="budget-mugyodong-bukeogukjib" data-budget-row="mugyodong-bukeogukjib" data-estimate-yen="1200">
+<article class="budget-entry" id="budget-mugyodong-bukeogukjib" data-budget-row="mugyodong-bukeogukjib" data-estimate-yen="1200" data-budget-day="day2">
   <div class="budget-entry-top">
     <span class="badge badge-food">ごはん</span>
     <span class="time-pill">08:30-09:00</span>
@@ -209,7 +216,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-3k-trading" data-budget-row="3k-trading" data-estimate-yen="4000">
+<article class="budget-entry" id="budget-3k-trading" data-budget-row="3k-trading" data-estimate-yen="4000" data-budget-day="day2">
   <div class="budget-entry-top">
     <span class="badge badge-souvenir">お土産</span>
     <span class="time-pill">09:45-10:05</span>
@@ -234,7 +241,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-olive-young-gangnam" data-budget-row="olive-young-gangnam" data-estimate-yen="10000">
+<article class="budget-entry" id="budget-olive-young-gangnam" data-budget-row="olive-young-gangnam" data-estimate-yen="10000" data-budget-day="day2">
   <div class="budget-entry-top">
     <span class="badge badge-shopping">買い物</span>
     <span class="time-pill">10:30-10:45</span>
@@ -259,7 +266,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-nike-gangnam" data-budget-row="nike-gangnam" data-estimate-yen="10000">
+<article class="budget-entry" id="budget-nike-gangnam" data-budget-row="nike-gangnam" data-estimate-yen="10000" data-budget-day="day2">
   <div class="budget-entry-top">
     <span class="badge badge-shopping">買い物</span>
     <span class="time-pill">11:00-11:50</span>
@@ -284,7 +291,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-seongsu-area" data-budget-row="seongsu-area" data-estimate-yen="5000">
+<article class="budget-entry" id="budget-seongsu-area" data-budget-row="seongsu-area" data-estimate-yen="5000" data-budget-day="day2">
   <div class="budget-entry-top">
     <span class="badge badge-shopping">買い物</span>
     <span class="time-pill">12:30-13:50</span>
@@ -309,7 +316,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-grandpa-factory" data-budget-row="grandpa-factory" data-estimate-yen="1500">
+<article class="budget-entry" id="budget-grandpa-factory" data-budget-row="grandpa-factory" data-estimate-yen="1500" data-budget-day="day2">
   <div class="budget-entry-top">
     <span class="badge badge-cafe">カフェ</span>
     <span class="time-pill">14:05-14:55</span>
@@ -334,7 +341,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-1002-ogyeopsal" data-budget-row="1002-ogyeopsal" data-estimate-yen="3500">
+<article class="budget-entry" id="budget-1002-ogyeopsal" data-budget-row="1002-ogyeopsal" data-estimate-yen="3500" data-budget-day="day2">
   <div class="budget-entry-top">
     <span class="badge badge-food">ごはん</span>
     <span class="time-pill">16:00-17:15</span>
@@ -359,7 +366,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-kkotpigong" data-budget-row="kkotpigong" data-estimate-yen="3000">
+<article class="budget-entry" id="budget-kkotpigong" data-budget-row="kkotpigong" data-estimate-yen="3000" data-budget-day="day2">
   <div class="budget-entry-top">
     <span class="badge badge-food">ごはん</span>
     <span class="time-pill">20:00-21:15</span>
@@ -387,14 +394,14 @@
   </section>
 
 
-  <section class="budget-day-section">
+  <section class="budget-day-section" data-budget-day-panel="day3" hidden>
     <div class="budget-day-header">
       <h2>Day 3</h2>
       
     </div>
     <div class="budget-entry-list">
       
-<article class="budget-entry" id="budget-cafe-sollago" data-budget-row="cafe-sollago" data-estimate-yen="1000">
+<article class="budget-entry" id="budget-cafe-sollago" data-budget-row="cafe-sollago" data-estimate-yen="1000" data-budget-day="day3">
   <div class="budget-entry-top">
     <span class="badge badge-cafe">カフェ</span>
     <span class="time-pill">07:30-08:10</span>
@@ -419,7 +426,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-ilmijip" data-budget-row="ilmijip" data-estimate-yen="2500">
+<article class="budget-entry" id="budget-ilmijip" data-budget-row="ilmijip" data-estimate-yen="2500" data-budget-day="day3">
   <div class="budget-entry-top">
     <span class="badge badge-food">ごはん</span>
     <span class="time-pill">11:30-12:45</span>
@@ -444,7 +451,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-made-lim" data-budget-row="made-lim" data-estimate-yen="2000">
+<article class="budget-entry" id="budget-made-lim" data-budget-row="made-lim" data-estimate-yen="2000" data-budget-day="day3">
   <div class="budget-entry-top">
     <span class="badge badge-cafe">カフェ</span>
     <span class="time-pill">13:55-14:15</span>

@@ -33,6 +33,8 @@
 
   const budgetPage = document.querySelector("[data-budget-page]");
   if (budgetPage) {
+    const budgetDayButtons = Array.from(document.querySelectorAll("[data-budget-day-button]"));
+    const budgetDayPanels = Array.from(document.querySelectorAll("[data-budget-day-panel]"));
     const budgetRows = Array.from(document.querySelectorAll("[data-budget-row]"));
     const budgetInputs = Array.from(document.querySelectorAll("[data-budget-input]"));
     const actualTotalNode = document.querySelector("[data-budget-actual-total]");
@@ -43,6 +45,25 @@
     const confirmResetButton = document.querySelector("[data-confirm-reset]");
 
     const formatter = new Intl.NumberFormat("ja-JP");
+    const showBudgetDay = (dayId) => {
+      budgetDayButtons.forEach((button) => {
+        const active = button.dataset.budgetDayButton === dayId;
+        button.setAttribute("aria-selected", String(active));
+        button.classList.toggle("is-active", active);
+      });
+
+      budgetDayPanels.forEach((panel) => {
+        panel.hidden = panel.dataset.budgetDayPanel !== dayId;
+      });
+    };
+
+    if (budgetDayButtons.length && budgetDayPanels.length) {
+      budgetDayButtons.forEach((button) => {
+        button.addEventListener("click", () => showBudgetDay(button.dataset.budgetDayButton));
+      });
+      showBudgetDay(budgetDayButtons[0].dataset.budgetDayButton);
+    }
+
     const loadState = () => {
       try {
         return JSON.parse(localStorage.getItem(BUDGET_STORAGE_KEY) || "{}");
@@ -155,6 +176,10 @@
     if (focusSlug) {
       const targetRow = document.getElementById(`budget-${focusSlug}`);
       if (targetRow) {
+        const rowDayId = targetRow.dataset.budgetDay;
+        if (rowDayId) {
+          showBudgetDay(rowDayId);
+        }
         targetRow.classList.add("is-focused");
         window.setTimeout(() => {
           targetRow.scrollIntoView({ behavior: "smooth", block: "center" });
