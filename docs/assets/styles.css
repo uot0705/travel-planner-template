@@ -479,78 +479,37 @@ img {
   padding: 20px 18px;
 }
 
-.budget-page-card {
-  padding: 0;
-  overflow: hidden;
-}
-
-.budget-table-wrap {
-  overflow-x: auto;
-}
-
-.budget-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 720px;
-}
-
-.budget-table th,
-.budget-table td {
-  padding: 14px 16px;
-  border-bottom: 1px solid rgba(24, 33, 38, 0.08);
-  text-align: left;
-  vertical-align: middle;
-}
-
-.budget-table thead th {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background: rgba(255, 253, 248, 0.98);
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-}
-
-.budget-table tbody tr.is-focused {
-  background: rgba(219, 94, 48, 0.08);
-}
-
-.budget-place-cell {
-  display: grid;
-  gap: 4px;
-}
-
 .budget-place-link {
   font-weight: 800;
   text-decoration: none;
 }
 
 .budget-place-name {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 800;
+  line-height: 1.25;
 }
 
 .budget-place-meta {
+  margin-top: 6px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .budget-input-wrap {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
-  min-width: 120px;
-  padding: 10px 12px;
-  border: 1px solid rgba(24, 33, 38, 0.12);
-  border-radius: 14px;
-  background: white;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(24, 33, 38, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .budget-input-wrap span {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 900;
 }
 
@@ -562,7 +521,8 @@ img {
   background: transparent;
   color: var(--ink);
   font: inherit;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .reset-button {
@@ -575,8 +535,7 @@ img {
   max-width: 46rem;
 }
 
-.guide-lead code,
-.guide-step-copy code {
+.guide-lead code {
   padding: 2px 7px;
   border-radius: 999px;
   background: rgba(24, 33, 38, 0.06);
@@ -585,45 +544,187 @@ img {
   font-weight: 800;
 }
 
-.guide-list {
-  list-style: none;
+.guide-summary-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 12px;
-  margin: 0;
-  padding: 0;
+  margin-top: 22px;
 }
 
-.guide-step {
+.guide-summary-card {
+  padding: 16px;
+  border: 1px solid rgba(24, 33, 38, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.guide-summary-card .label,
+.budget-value-box .label,
+.budget-input-card .label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.guide-summary-card .value,
+.budget-value-box .value {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.guide-phase-list {
   display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.guide-phase-card {
+  padding: 18px;
+  border: 1px solid rgba(24, 33, 38, 0.08);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow);
+}
+
+.guide-phase-top {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 14px;
   align-items: flex-start;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(24, 33, 38, 0.08);
 }
 
-.guide-step:last-child {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-.guide-step-index {
+.guide-phase-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  min-width: 72px;
+  padding: 10px 14px;
   border-radius: 16px;
   background: var(--accent-soft);
   color: var(--accent);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 900;
+  letter-spacing: 0.04em;
 }
 
-.guide-step-copy {
+.guide-phase-top h2 {
   margin: 0;
-  padding-top: 7px;
-  font-size: 15px;
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.guide-phase-top p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.guide-phase-steps {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-phase-steps li {
+  padding: 13px 14px;
+  border: 1px solid rgba(24, 33, 38, 0.08);
+  border-radius: 16px;
+  background: white;
+  font-size: 14px;
+}
+
+.budget-sections {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.budget-day-section {
+  padding: 18px;
+  border: 1px solid rgba(24, 33, 38, 0.08);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow);
+}
+
+.budget-day-header {
+  margin-bottom: 14px;
+}
+
+.budget-day-header h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.budget-day-header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.budget-entry-list {
+  display: grid;
+  gap: 14px;
+}
+
+.budget-entry {
+  padding: 18px;
+  border: 1px solid rgba(24, 33, 38, 0.08);
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 12px 28px rgba(24, 33, 38, 0.06);
+}
+
+.budget-entry.is-focused {
+  border-color: rgba(219, 94, 48, 0.32);
+  box-shadow:
+    0 0 0 4px rgba(219, 94, 48, 0.12),
+    0 12px 28px rgba(24, 33, 38, 0.08);
+}
+
+.budget-entry-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.budget-entry-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.budget-entry-values {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.budget-value-box,
+.budget-input-card {
+  padding: 14px;
+  border: 1px solid rgba(24, 33, 38, 0.08);
+  border-radius: 18px;
+  background: rgba(247, 243, 234, 0.78);
+}
+
+.budget-input-card {
+  display: block;
+}
+
+.budget-inline-link {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .place-section dl {
@@ -743,28 +844,24 @@ img {
     gap: 6px;
   }
 
-  .place-actions {
+  .guide-summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .guide-phase-top {
     grid-template-columns: 1fr;
   }
 
-  .guide-step {
-    grid-template-columns: 40px minmax(0, 1fr);
-    gap: 12px;
+  .guide-phase-badge {
+    min-width: 0;
+    width: fit-content;
   }
 
-  .guide-step-index {
-    width: 38px;
-    height: 38px;
-    border-radius: 14px;
-    font-size: 12px;
+  .budget-entry-head {
+    display: block;
   }
 
-  .guide-step-copy {
-    padding-top: 5px;
-    font-size: 14px;
-  }
-
-  .budget-table {
-    min-width: 640px;
+  .budget-entry-values {
+    grid-template-columns: 1fr;
   }
 }
