@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>今回の予算 | Korea Travel</title>
+    <meta name="description" content="ソウル旅行の旅程とスポット詳細をスマホで見やすく整理した静的サイト。">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script defer src="assets/app.js"></script>
+  </head>
+  <body>
+    
+<main class="site-shell" data-budget-page>
+  <section class="place-hero">
+    <span class="eyebrow">Trip Budget</span>
+    <div class="place-header">
+      <div>
+        <h1>今回の予算</h1>
+        <p>予算目安と当日使った金額を、この端末だけに保存できます。</p>
+      </div>
+      <div class="inline-list">
+        <span class="chip">自動保存</span>
+        <span class="chip">この端末のみ</span>
+      </div>
+    </div>
+    <div class="place-actions">
+      <a class="nav-link" href="index.html#day1">日程へ戻る</a>
+      <a class="nav-link" href="airport-guide.html">飛行機の行き方</a>
+      <button class="secondary-link reset-button" type="button" data-budget-reset>入力をクリア</button>
+    </div>
+  </section>
+
+  <section class="budget-grid">
+    <article class="budget-card">
+      <span class="label">予算目安合計</span>
+      <div class="value">¥44,400</div>
+    </article>
+    <article class="budget-card">
+      <span class="label">入力合計</span>
+      <div class="value" data-budget-actual-total>¥0</div>
+    </article>
+    <article class="budget-card">
+      <span class="label">差額</span>
+      <div class="value" data-budget-diff>-¥44,400</div>
+    </article>
+  </section>
+
+  <section class="place-card budget-page-card">
+    <div class="budget-table-wrap">
+      <table class="budget-table">
+        <thead>
+          <tr>
+            <th>カテゴリ</th>
+            <th>スポット</th>
+            <th>予算目安</th>
+            <th>使った金額</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr id="budget-sollago-myeongdong-hotel" data-budget-row="sollago-myeongdong-hotel" data-estimate-yen="0">
+  <td><span class="badge badge-logistics">ホテル</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/sollago-myeongdong-hotel.html">ソラゴ明洞 ホテル＆レジデンス</a></div>
+      <div class="budget-place-meta">明洞</div>
+    </div>
+  </td>
+  <td>別枠</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="sollago-myeongdong-hotel">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-1002-ogyeopsal" data-budget-row="1002-ogyeopsal" data-estimate-yen="3500">
+  <td><span class="badge badge-food">ごはん</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/1002-ogyeopsal.html">1002オギョプサル</a></div>
+      <div class="budget-place-meta">合井（ハプチョン）</div>
+    </div>
+  </td>
+  <td>¥3,500</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="1002-ogyeopsal">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-ilmijip" data-budget-row="ilmijip" data-estimate-yen="2500">
+  <td><span class="badge badge-food">ごはん</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/ilmijip.html">イルミチブ</a></div>
+      <div class="budget-place-meta">淑大入口・厚岩洞</div>
+    </div>
+  </td>
+  <td>¥2,500</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="ilmijip">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-kkotpigong" data-budget-row="kkotpigong" data-estimate-yen="3000">
+  <td><span class="badge badge-food">ごはん</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/kkotpigong.html">コッピゴン</a></div>
+      <div class="budget-place-meta">西村・景福宮</div>
+    </div>
+  </td>
+  <td>¥3,000</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="kkotpigong">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-seoul-bam" data-budget-row="seoul-bam" data-estimate-yen="3000">
+  <td><span class="badge badge-food">ごはん</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/seoul-bam.html">ソウルバム</a></div>
+      <div class="budget-place-meta">梨泰院・解放村寄り</div>
+    </div>
+  </td>
+  <td>¥3,000</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="seoul-bam">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-tosokchon" data-budget-row="tosokchon" data-estimate-yen="2500">
+  <td><span class="badge badge-food">ごはん</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/tosokchon.html">土俗村</a></div>
+      <div class="budget-place-meta">景福宮・西村</div>
+    </div>
+  </td>
+  <td>¥2,500</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="tosokchon">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-mugyodong-bukeogukjib" data-budget-row="mugyodong-bukeogukjib" data-estimate-yen="1200">
+  <td><span class="badge badge-food">ごはん</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/mugyodong-bukeogukjib.html">武橋洞プゴクッチッ</a></div>
+      <div class="budget-place-meta">市庁・光化門</div>
+    </div>
+  </td>
+  <td>¥1,200</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="mugyodong-bukeogukjib">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-yongcheon-yeonghwa-cheongdam" data-budget-row="yongcheon-yeonghwa-cheongdam" data-estimate-yen="4500">
+  <td><span class="badge badge-food">ごはん</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name">永川永化 清潭店</div>
+      <div class="budget-place-meta">清潭・狎鴎亭寄り</div>
+    </div>
+  </td>
+  <td>¥4,500</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="yongcheon-yeonghwa-cheongdam">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-gangnam-myeonok-apgujeong" data-budget-row="gangnam-myeonok-apgujeong" data-estimate-yen="2500">
+  <td><span class="badge badge-food">ごはん</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name">江南麺屋 狎鴎亭本店</div>
+      <div class="budget-place-meta">狎鴎亭</div>
+    </div>
+  </td>
+  <td>¥2,500</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="gangnam-myeonok-apgujeong">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-cafe-sollago" data-budget-row="cafe-sollago" data-estimate-yen="1000">
+  <td><span class="badge badge-cafe">カフェ</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/cafe-sollago.html">CAFE SOLLAGO</a></div>
+      <div class="budget-place-meta">ホテル館内</div>
+    </div>
+  </td>
+  <td>¥1,000</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="cafe-sollago">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-grandpa-factory" data-budget-row="grandpa-factory" data-estimate-yen="1500">
+  <td><span class="badge badge-cafe">カフェ</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/grandpa-factory.html">CAFEハラボジ工場</a></div>
+      <div class="budget-place-meta">聖水（ソンス）</div>
+    </div>
+  </td>
+  <td>¥1,500</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="grandpa-factory">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-standard-bun" data-budget-row="standard-bun" data-estimate-yen="1200">
+  <td><span class="badge badge-cafe">カフェ</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/standard-bun.html">Cafe STANDARD BUN</a></div>
+      <div class="budget-place-meta">龍山・新龍山</div>
+    </div>
+  </td>
+  <td>¥1,200</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="standard-bun">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-made-lim" data-budget-row="made-lim" data-estimate-yen="2000">
+  <td><span class="badge badge-cafe">カフェ</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/made-lim.html">MADE林</a></div>
+      <div class="budget-place-meta">仁川・永宗島（乙旺里寄り）</div>
+    </div>
+  </td>
+  <td>¥2,000</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="made-lim">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-nike-gangnam" data-budget-row="nike-gangnam" data-estimate-yen="7000">
+  <td><span class="badge badge-shopping">買い物</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/nike-gangnam.html">NIKE GANGNAM</a></div>
+      <div class="budget-place-meta">江南</div>
+    </div>
+  </td>
+  <td>¥7,000</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="nike-gangnam">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-olive-young-gangnam" data-budget-row="olive-young-gangnam" data-estimate-yen="5000">
+  <td><span class="badge badge-shopping">買い物</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/olive-young-gangnam.html">オリーブヤング</a></div>
+      <div class="budget-place-meta">江南</div>
+    </div>
+  </td>
+  <td>¥5,000</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="olive-young-gangnam">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-seongsu-area" data-budget-row="seongsu-area" data-estimate-yen="0">
+  <td><span class="badge badge-shopping">買い物</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/seongsu-area.html">聖水洞エリア</a></div>
+      <div class="budget-place-meta">聖水（ソンス）</div>
+    </div>
+  </td>
+  <td>¥0</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="seongsu-area">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-3k-trading" data-budget-row="3k-trading" data-estimate-yen="4000">
+  <td><span class="badge badge-souvenir">お土産</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/3k-trading.html">3K商事</a></div>
+      <div class="budget-place-meta">明洞・忠武路寄り</div>
+    </div>
+  </td>
+  <td>¥4,000</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="3k-trading">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-108-stairs" data-budget-row="108-stairs" data-estimate-yen="0">
+  <td><span class="badge badge-tour">観光</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/108-stairs.html">108ハヌル階段</a></div>
+      <div class="budget-place-meta">解放村（ヘバンチョン）</div>
+    </div>
+  </td>
+  <td>¥0</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="108-stairs">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-sewoon" data-budget-row="sewoon" data-estimate-yen="0">
+  <td><span class="badge badge-tour">観光</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/sewoon.html">世運清渓商店街</a></div>
+      <div class="budget-place-meta">鍾路・乙支路</div>
+    </div>
+  </td>
+  <td>¥0</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="sewoon">
+    </label>
+  </td>
+</tr>
+
+
+<tr id="budget-noksapyeong-bridge" data-budget-row="noksapyeong-bridge" data-estimate-yen="0">
+  <td><span class="badge badge-tour">観光</span></td>
+  <td>
+    <div class="budget-place-cell">
+      <div class="budget-place-name"><a class="budget-place-link" href="places/noksapyeong-bridge.html">緑莎坪陸橋</a></div>
+      <div class="budget-place-meta">緑莎坪・梨泰院</div>
+    </div>
+  </td>
+  <td>¥0</td>
+  <td>
+    <label class="budget-input-wrap">
+      <span>¥</span>
+      <input type="number" min="0" step="1" inputmode="numeric" placeholder="0" data-budget-input="noksapyeong-bridge">
+    </label>
+  </td>
+</tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+  </body>
+</html>

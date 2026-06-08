@@ -98,6 +98,13 @@ img {
   margin-top: 20px;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
 .summary-card,
 .panel,
 .place-card,
@@ -366,7 +373,8 @@ img {
 .detail-link,
 .nav-link,
 .map-button,
-.secondary-link {
+.secondary-link,
+.hero-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -377,7 +385,8 @@ img {
 }
 
 .detail-link,
-.map-button.primary {
+.map-button.primary,
+.hero-link {
   margin-top: 14px;
   padding: 11px 15px;
   background: var(--ink);
@@ -391,6 +400,12 @@ img {
   border: 1px solid rgba(24, 33, 38, 0.12);
   background: white;
   color: var(--ink);
+}
+
+.secondary-hero-link {
+  background: white;
+  color: var(--ink);
+  border: 1px solid rgba(24, 33, 38, 0.12);
 }
 
 .day-footer-grid,
@@ -458,6 +473,157 @@ img {
 .place-layout {
   display: grid;
   gap: 18px;
+}
+
+.guide-card {
+  padding: 20px 18px;
+}
+
+.budget-page-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.budget-table-wrap {
+  overflow-x: auto;
+}
+
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.budget-table th,
+.budget-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(24, 33, 38, 0.08);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.budget-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: rgba(255, 253, 248, 0.98);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.budget-table tbody tr.is-focused {
+  background: rgba(219, 94, 48, 0.08);
+}
+
+.budget-place-cell {
+  display: grid;
+  gap: 4px;
+}
+
+.budget-place-link {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.budget-place-name {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.budget-place-meta {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.budget-input-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+  padding: 10px 12px;
+  border: 1px solid rgba(24, 33, 38, 0.12);
+  border-radius: 14px;
+  background: white;
+}
+
+.budget-input-wrap span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.budget-input-wrap input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 800;
+}
+
+.reset-button {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.guide-lead {
+  max-width: 46rem;
+}
+
+.guide-lead code,
+.guide-step-copy code {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(24, 33, 38, 0.06);
+  font-family: var(--font-ui);
+  font-size: 0.95em;
+  font-weight: 800;
+}
+
+.guide-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.guide-step {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 14px;
+  align-items: flex-start;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(24, 33, 38, 0.08);
+}
+
+.guide-step:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.guide-step-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.guide-step-copy {
+  margin: 0;
+  padding-top: 7px;
+  font-size: 15px;
 }
 
 .place-section dl {
@@ -579,5 +745,26 @@ img {
 
   .place-actions {
     grid-template-columns: 1fr;
+  }
+
+  .guide-step {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .guide-step-index {
+    width: 38px;
+    height: 38px;
+    border-radius: 14px;
+    font-size: 12px;
+  }
+
+  .guide-step-copy {
+    padding-top: 5px;
+    font-size: 14px;
+  }
+
+  .budget-table {
+    min-width: 640px;
   }
 }
