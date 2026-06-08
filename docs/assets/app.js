@@ -38,6 +38,9 @@
     const actualTotalNode = document.querySelector("[data-budget-actual-total]");
     const diffNode = document.querySelector("[data-budget-diff]");
     const resetButton = document.querySelector("[data-budget-reset]");
+    const resetDialog = document.querySelector("[data-reset-dialog]");
+    const cancelResetButton = document.querySelector("[data-cancel-reset]");
+    const confirmResetButton = document.querySelector("[data-confirm-reset]");
 
     const formatter = new Intl.NumberFormat("ja-JP");
     const loadState = () => {
@@ -100,14 +103,51 @@
       }
     }
 
+    const resetBudgetState = () => {
+      localStorage.removeItem(BUDGET_STORAGE_KEY);
+      Object.keys(state).forEach((key) => delete state[key]);
+      budgetInputs.forEach((input) => {
+        input.value = "";
+      });
+      updateBudgetSummary();
+    };
+
     if (resetButton) {
       resetButton.addEventListener("click", () => {
-        localStorage.removeItem(BUDGET_STORAGE_KEY);
-        Object.keys(state).forEach((key) => delete state[key]);
-        budgetInputs.forEach((input) => {
-          input.value = "";
-        });
-        updateBudgetSummary();
+        if (resetDialog && typeof resetDialog.showModal === "function") {
+          resetDialog.showModal();
+          return;
+        }
+        if (window.confirm("入力した金額をこの端末から消しますか？")) {
+          resetBudgetState();
+        }
+      });
+    }
+
+    if (cancelResetButton) {
+      cancelResetButton.addEventListener("click", () => {
+        resetDialog?.close();
+      });
+    }
+
+    if (confirmResetButton) {
+      confirmResetButton.addEventListener("click", () => {
+        resetBudgetState();
+        resetDialog?.close();
+      });
+    }
+
+    if (resetDialog) {
+      resetDialog.addEventListener("click", (event) => {
+        const rect = resetDialog.getBoundingClientRect();
+        const clickedInside =
+          event.clientX >= rect.left &&
+          event.clientX <= rect.right &&
+          event.clientY >= rect.top &&
+          event.clientY <= rect.bottom;
+        if (!clickedInside) {
+          resetDialog.close();
+        }
       });
     }
 

@@ -24,16 +24,26 @@
       </div>
     </div>
     <div class="place-actions">
-      <a class="nav-link" href="index.html#day1">日程へ戻る</a>
-      <a class="nav-link" href="airport-guide.html">飛行機の行き方</a>
-      <button class="secondary-link reset-button" type="button" data-budget-reset>入力をクリア</button>
+      <a class="action-link action-link-secondary" href="index.html#day1">日程へ戻る</a>
+      <a class="action-link action-link-flight" href="airport-guide.html">飛行機の行き方</a>
+      <button class="action-link action-link-danger reset-button" type="button" data-budget-reset>入力をクリア</button>
     </div>
+    <dialog class="confirm-dialog" data-reset-dialog>
+      <div class="confirm-dialog-card">
+        <h2>入力をクリアしますか</h2>
+        <p>この端末に保存した実額入力をまとめて削除します。</p>
+        <div class="confirm-dialog-actions">
+          <button class="action-link action-link-secondary" type="button" data-cancel-reset>戻る</button>
+          <button class="action-link action-link-danger" type="button" data-confirm-reset>クリアする</button>
+        </div>
+      </div>
+    </dialog>
   </section>
 
   <section class="budget-grid budget-summary-grid-page">
     <article class="budget-card">
       <span class="label">予算目安合計</span>
-      <div class="value">¥37,400</div>
+      <div class="value">¥50,400</div>
     </article>
     <article class="budget-card">
       <span class="label">入力合計</span>
@@ -41,7 +51,7 @@
     </article>
     <article class="budget-card">
       <span class="label">差額</span>
-      <div class="value" data-budget-diff>-¥37,400</div>
+      <div class="value" data-budget-diff>-¥50,400</div>
     </article>
   </section>
 
@@ -224,7 +234,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-olive-young-gangnam" data-budget-row="olive-young-gangnam" data-estimate-yen="5000">
+<article class="budget-entry" id="budget-olive-young-gangnam" data-budget-row="olive-young-gangnam" data-estimate-yen="10000">
   <div class="budget-entry-top">
     <span class="badge badge-shopping">買い物</span>
     <span class="time-pill">10:30-10:45</span>
@@ -236,7 +246,7 @@
   <div class="budget-entry-values">
     <div class="budget-value-box">
       <span class="label">予算目安</span>
-      <div class="value">¥5,000</div>
+      <div class="value">¥10,000</div>
     </div>
     <label class="budget-input-card">
       <span class="label">使った金額</span>
@@ -249,7 +259,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-nike-gangnam" data-budget-row="nike-gangnam" data-estimate-yen="7000">
+<article class="budget-entry" id="budget-nike-gangnam" data-budget-row="nike-gangnam" data-estimate-yen="10000">
   <div class="budget-entry-top">
     <span class="badge badge-shopping">買い物</span>
     <span class="time-pill">11:00-11:50</span>
@@ -261,7 +271,7 @@
   <div class="budget-entry-values">
     <div class="budget-value-box">
       <span class="label">予算目安</span>
-      <div class="value">¥7,000</div>
+      <div class="value">¥10,000</div>
     </div>
     <label class="budget-input-card">
       <span class="label">使った金額</span>
@@ -274,7 +284,7 @@
 </article>
 
 
-<article class="budget-entry" id="budget-seongsu-area" data-budget-row="seongsu-area" data-estimate-yen="0">
+<article class="budget-entry" id="budget-seongsu-area" data-budget-row="seongsu-area" data-estimate-yen="5000">
   <div class="budget-entry-top">
     <span class="badge badge-shopping">買い物</span>
     <span class="time-pill">12:30-13:50</span>
@@ -286,7 +296,7 @@
   <div class="budget-entry-values">
     <div class="budget-value-box">
       <span class="label">予算目安</span>
-      <div class="value">¥0</div>
+      <div class="value">¥5,000</div>
     </div>
     <label class="budget-input-card">
       <span class="label">使った金額</span>
