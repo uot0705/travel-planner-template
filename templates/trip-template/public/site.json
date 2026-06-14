@@ -1,0 +1,49 @@
+{
+  "site": {
+    "title": "Trip Summary",
+    "badge": "Travel Summary",
+    "tagline": "Public-safe overview only",
+    "description": "This page is for high-level travel context only. Do not include timed itinerary items, booking details, or personal data."
+  },
+  "hero_facts": [
+    "Summary only",
+    "No personal data",
+    "Mobile friendly"
+  ],
+  "cards": [
+    {
+      "label": "Focus",
+      "title": "What this trip is for",
+      "text": "Write one short sentence about the overall theme of the trip."
+    },
+    {
+      "label": "Areas",
+      "title": "Main neighborhoods",
+      "text": "List only broad areas, not exact addresses."
+    },
+    {
+      "label": "Budget",
+      "title": "Budget range",
+      "text": "Keep this approximate and high-level."
+    }
+  ],
+  "sections": [
+    {
+      "id": "highlights",
+      "title": "Highlights",
+      "items": [
+        "Short bullet",
+        "Short bullet"
+      ]
+    },
+    {
+      "id": "prep",
+      "title": "Prep",
+      "items": [
+        "What to prepare",
+        "What to confirm"
+      ]
+    }
+  ],
+  "footer_note": "Keep public pages summary-only. Do not publish names, reservations, tickets, contacts, or timed schedules."
+}

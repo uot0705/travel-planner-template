@@ -1,0 +1,10 @@
+.DS_Store
+.serena/
+__pycache__/
+*.pyc
+docs/.DS_Store
+
+# Private trip data
+trips/*
+!trips/.gitkeep
+!trips/README.md

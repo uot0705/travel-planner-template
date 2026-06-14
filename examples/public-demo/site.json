@@ -1,0 +1,65 @@
+{
+  "site": {
+    "title": "Travel Planner Template",
+    "badge": "Public Demo",
+    "tagline": "A public-safe travel page should stay high level",
+    "description": "Use this example as the shape for pages you are comfortable publishing. It keeps the page readable without exposing timed plans or private travel data."
+  },
+  "hero_facts": [
+    "Summary only",
+    "No timed itinerary",
+    "No booking details"
+  ],
+  "cards": [
+    {
+      "label": "Use case",
+      "title": "Shareable overview",
+      "text": "Show the overall direction of a trip without exposing operational details."
+    },
+    {
+      "label": "Scope",
+      "title": "Broad areas and themes",
+      "text": "Keep content at the neighborhood, category, and prep level."
+    },
+    {
+      "label": "Guardrail",
+      "title": "Private data stays local",
+      "text": "Tickets, reservations, names, and detailed schedules belong in private trip files only."
+    }
+  ],
+  "sections": [
+    {
+      "id": "what-to-show",
+      "title": "What to show",
+      "items": [
+        "Trip purpose",
+        "Main areas to visit",
+        "Category mix such as food, shopping, or nature",
+        "Packing or prep notes",
+        "Rough budget range"
+      ]
+    },
+    {
+      "id": "what-to-hide",
+      "title": "What to hide",
+      "items": [
+        "Timed daily schedule",
+        "Exact booking details",
+        "Emergency contacts",
+        "Ticket or reservation identifiers",
+        "Detailed place-by-place research notes"
+      ]
+    },
+    {
+      "id": "next-trip-flow",
+      "title": "Next trip flow",
+      "items": [
+        "Copy the trip template into trips slash trip-id",
+        "Fill in wishlist first",
+        "Let the agent research and draft the private plan",
+        "Publish only the summary JSON if a public page is needed"
+      ]
+    }
+  ],
+  "footer_note": "Public travel pages should explain the shape of a trip, not the exact movements or private booking data behind it."
+}
