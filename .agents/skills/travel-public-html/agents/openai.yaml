@@ -1,0 +1,4 @@
+interface:
+  display_name: "公開HTMLを作る"
+  short_description: "private 旅程を public-safe な site と HTML に変換する"
+  default_prompt: "Use $travel-public-html to private 旅程から public-safe な site.json と HTML を作ってください。"

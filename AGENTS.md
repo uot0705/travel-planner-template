@@ -1,8 +1,10 @@
 # Repository Rules
 
-- 旅行データは `trips/<trip-id>/` に置き、git に含めない。
-- ユーザーには、なるべくコマンド実行を求めない。基本は会話だけで進める。
-- 新しい旅行を始めるときは、Codex 側で `trips/<trip-id>/` を自動作成してから作業を始める。
-- public HTML を作る前に `README.md` と `specs/html-ui.md` を読む。
-- public HTML は `public/site.json` から生成し、時刻入り日程や詳細スポットページを出さない。
-- `outputs/places.md` と `outputs/itinerary.md` は private 運用前提で扱う。
+- 新しい旅行を始めるときは、まず `.agents/skills/travel-trip-intake` を使う
+- trip の入力整理が終わったら `.agents/skills/travel-itinerary-planner` を使う
+- 公開ページが必要なときだけ `.agents/skills/travel-public-html` を使う
+- ユーザーには極力コマンド実行を求めず、会話ベースで進める
+- `trips/<trip-id>/` は private planning 用で、コミットしない
+- public HTML の正本は `specs/html-ui.md`
+- public HTML 作成では `scripts/build_site.py` と `scripts/validate_site.py` を使う
+- public 側には時刻、予約番号、航空券番号、電話番号、実名を出さない

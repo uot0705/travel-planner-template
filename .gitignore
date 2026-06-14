@@ -3,6 +3,9 @@
 __pycache__/
 *.pyc
 docs/.DS_Store
+!.agents/
+!.agents/skills/
+!.agents/skills/**
 
 # Private trip data
 trips/*

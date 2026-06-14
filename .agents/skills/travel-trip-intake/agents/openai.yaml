@@ -1,0 +1,4 @@
+interface:
+  display_name: "旅行の入力を整理"
+  short_description: "会話から旅行条件を整理して新しい trip の inputs を作る"
+  default_prompt: "Use $travel-trip-intake to 会話から旅行条件を整理し、trip 雛形と inputs を作ってください。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "日程を組む"
+  short_description: "入力済み trip を調査して候補地と private 旅程を作る"
+  default_prompt: "Use $travel-itinerary-planner to 入力済み trip をもとに調査し、places と itinerary を作ってください。"
