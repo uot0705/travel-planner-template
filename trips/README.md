@@ -2,11 +2,7 @@
 
 このディレクトリには、旅行ごとの private データを置きます。
 
-新しい旅行を始めるときは、たとえば次のように template をコピーします。
-
-```bash
-cp -R templates/trip-template trips/<trip-id>
-```
+通常はユーザーがここを直接触るのではなく、Codex が新しい旅行フォルダを作って使います。
 
 例:
 

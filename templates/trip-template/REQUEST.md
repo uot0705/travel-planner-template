@@ -1,6 +1,8 @@
 # Agent Request
 
-`inputs/` を読んで、以下を作ってください。
+ユーザーは、基本的に会話で `行き先` `行きたい場所` `日数` `条件` を渡すだけでよいです。
+
+必要なら Codex が会話内容を `inputs/` に整理してから、以下を作ってください。
 
 - `outputs/places.md`
 - `outputs/itinerary.md`

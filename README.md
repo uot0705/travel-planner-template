@@ -11,13 +11,12 @@
 
 ## public に上げてよいもの
 
-- `scripts/`
-- `site_src/`
-- `specs/`
-- `templates/`
-- `examples/`
-- `docs/`
-- この `README.md`
+- このテンプレの使い方
+- 公開ページの作り方
+- UI や公開ルールの仕様
+- 個人情報を含まない雛形ファイル
+- 個人情報を含まないサンプルデータ
+- 公開ページを生成するためのスクリプトや見た目のコード
 
 ## public に上げないもの
 
@@ -30,14 +29,14 @@
 
 ## 最短の使い方
 
-1. このリポを clone する
-2. `cp -R templates/trip-template trips/<trip-id>` で雛形を作る
-3. 最低限 `inputs/wishlist.md` に行きたい場所を書く
-4. 必要なら `inputs/trip_overview.md` に旅程条件を書く
-5. エージェントに `REQUEST.md` の内容で依頼する
-6. 公開用ページが必要なら `public/site.json` を埋めて `python3 scripts/build_site.py trips/<trip-id>` を実行する
+1. ユーザーが Codex に `行き先` `行きたい場所` `旅行日数` `条件` を伝える
+2. Codex が `trips/<trip-id>/` を作って、会話内容を `inputs/` に整理する
+3. Codex がスポットを調べて `outputs/places.md` と `outputs/itinerary.md` を作る
+4. 公開用ページが必要なときだけ、Codex が `public/site.json` を作って `docs/` を更新する
 
-`trips/` は ignore 済みなので、ここに置いた実データはそのままでは git に入りません。
+ユーザーが毎回コマンドを打つ前提ではなく、基本は会話だけで進める想定です。
+
+`trips/` は ignore 済みなので、Codex がここに作った実データはそのままでは git に入りません。
 
 ## trips の中身
 
@@ -61,6 +60,8 @@ trips/<trip-id>/
 HTML を作る前に `specs/html-ui.md` を確認すること。公開ページの内容・UI・禁止事項はそちらを正本とします。
 
 ## コマンド
+
+通常は Codex が内部で実行すればよく、ユーザーが意識しなくてよいコマンドです。
 
 デモの public ページを生成:
 
